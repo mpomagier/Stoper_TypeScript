@@ -1,19 +1,22 @@
-import Stopwatch from './Stopwatch.js'
+import Stopwatch from "./Stopwatch.js";
 
 class StopwatchWithResults extends Stopwatch {
-  
-  results = []
+  results = [];
 
   constructor(element) {
-    super(element)
-    this.prepareElements(element)
-    this.prepareActions()
+    super(element);
+    this.prepareElements(element);
+    this.prepareActions();
   }
 
   prepareElements(element) {
-    this.dom.resultsList = element.querySelector('.stopwatch__results')
-    this.dom.addToListBtn = element.querySelector('.stopwatch__start-add-to-list')
-    this.dom.resetListBtn = element.querySelector('.stopwatch__start-reset-list')
+    this.dom.resultsList = element.querySelector(".stopwatch__results");
+    this.dom.addToListBtn = element.querySelector(
+      ".stopwatch__start-add-to-list"
+    );
+    this.dom.resetListBtn = element.querySelector(
+      ".stopwatch__start-reset-list"
+    );
   }
 
   prepareActions() {
@@ -44,7 +47,6 @@ class StopwatchWithResults extends Stopwatch {
     Funkcja ta powinna czyścić tablicę this.results oraz zawartość this.dom.resultsList
     */
   }
-
 }
 
-export default StopwatchWithResults
+export default StopwatchWithResults;
