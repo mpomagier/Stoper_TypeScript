@@ -79,7 +79,7 @@ abstract class Stopwatch {
 
   start(): void {
     if (this.timer === null) {
-      this.timer = setInterval(() => this.step(), 1);
+      this.timer = setInterval(() => this.step(), 1) as any as number;
     }
     /*
     Funkcja ta powinna wystartować interwał, który będzie wykonywał się co milisekundę. Powinien on każdorazowo włączać funkcję this.step
